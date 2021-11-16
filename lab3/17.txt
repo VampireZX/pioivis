@@ -1,0 +1,394 @@
+\documentclass[twoside,twocolumn]{article}
+\usepackage{hyperref}
+\usepackage{textgreek,textcomp,gensymb,stix}
+\usepackage{layout}
+\usepackage{multirow}
+\setcounter{page}{137}
+\usepackage[T1]{fontenc}
+\usepackage{calc,pict2e,picture}
+\usepackage{textgreek,textcomp,gensymb,stix}
+\usepackage[hmarginratio=1:1,top=28.02mm,columnsep=20pt]{geometry}
+\usepackage[hang, small,labelfont=bf,up,textfont=it,up]{caption}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{titling}
+\usepackage{floatrow}
+\floatsetup[table]{style=Plaintop}
+\usepackage{titlesec}
+\renewcommand\thesection{\Roman{section}}
+\titlespacing{\section}{\parindent}{3mm}{3mm}
+\titlespacing{\subsection}{\parindent}{10mm}{10mm}
+\titleformat{\section}[block]{\small\scshape\centering}{\thesection.}{0.5em}{}
+\setlength{\droptitle}{-8.5\baselineskip}
+\title{\huge{Hybridization Method of Intelligent Models}}
+\author{
+Vadim V. Borisov \\
+\normalsize \textit{Department of Computer Engineering,} \\
+\normalsize \textit{The Branch of National Research University “Moscow Power Engineering Institute” in Smolensk,}\\
+\normalsize {vbor67@mail.ru}
+}
+\setlist[itemize]{noitemsep}
+\date{}
+
+
+\begin{document}
+
+\maketitle
+\textwidth420pt
+\textheight630pt
+
+\small\textbf{\textit{Abstract}—The development trends of intelligent models
+are generalized. The approach to systematization and
+classification of hybrid models is described. Examples of
+classification of known hybrid intelligent models related to
+each considered approach to their hybridization are given.
+The proposed method of hybridization of intelligent models
+is considered.}
+
+\par \textbf{\textit{Keywords}—hybridization of intelligent models, fuzzy
+model, neural network model, evolutionary modelling}
+
+\section{\normalsize I\small NTRODUCTION}
+
+\small {At present the researches in the field of creation
+of intelligent models are actively conducted. The main
+tendencies of their development are the following:\par
+\begin{itemize}
+    \item these intelligent models are actively used for the
+solution of poorly structured and unstructured problems;
+    \item these intelligent models based on representation and
+processing of heterogeneous data and knowledge;
+    \item principles of hybridization and adaptability are used
+more and more widely;
+    \item problems can be solved in conditions of various types of uncertainty (stochastic, statistical, not
+stochastic, linguistic).
+\end{itemize}
+
+At present intensive researches are carried out in the
+field of the following intelligent modelling [1]: fuzzy
+models based on theories of fuzzy computing, fuzzy sets
+and relations, fuzzy measure, fuzzy logic and inference;
+neural networks models based on artificial neural network theory; methods and technologies of evolutional
+modelling and genetic algorithms.
+
+\par For each intelligent model is possible to define the
+development trends.
+
+\par The development trends of fuzzy models are the following:\\
+\begin{itemize}
+    \item development of fuzzy mathematics (of fuzzy computing, fuzzy sets and relations, fuzzy measure,
+fuzzy logic etc.);
+    \item designing of fuzziness into traditional mathematical
+models;
+    \item designing of fuzzy models which correspond to
+features of tasks;
+    \item hybridization of fuzzy models of various types;
+ \item use of fuzzy models, methods and technologies for
+problem solving in various subject areas.
+\end{itemize}
+
+The development trends of neural networks models are
+the following:\\
+\begin{itemize}
+
+    \item designing of neuron-like elements of artificial neural
+networks; 
+
+    \item designing of neural networks which correspond to
+the features of tasks;
+
+    \item designing of algorithms of artificial neural networks
+training;
+
+    \item combination of neural networks models of various
+types;
+
+    \item use of neural networks models, methods and technologies for solving problems in various subject
+areas
+
+\end{itemize}
+
+The development trends of evolutionary modelling
+methods and technologies are the following:\\
+
+\begin{itemize}
+    \item designing of genetic operators, criteria and search
+strategy;
+
+    \item designing of genetic algorithms providing the
+greater accuracy and rapid convergence;
+
+    \item developing of approaches to adaptation of genetic
+algorithms for problem solving in various subject
+areas.
+\end{itemize}
+
+At present the intensive researches are conducted in
+the field of creation of hybrid intelligent models, methods and technologies. Hybridization of these intelligent
+models allows them to complement each other.
+
+Hybridization compensates the restrictions of each of
+these models and it also provides tolerance to uncertainty
+and partial validity of the data used to achieve flexibility
+of decisions [2].
+
+However, up to now, there is no unified approach
+to hybrid models systematization. The purpose of this
+paper is the following: to systematize of existing hybrid
+models; to develop a mechanism for hybridization of
+intelligent models.}
+\section{\normalsize HYBRIDIZATION METHOD OF
+INTELLIGENT MODELS}
+Hybridization can be realized in different ways: either
+between models related to different intelligent technologies, or within the same intellectual technology [3]. In
+both cases hybridization of intelligent models is possible
+on the basis of one of following approaches:
+\begin{itemize}
+    \item hybridization “with functional replacement” – one
+of the model is picked out as a dominating model,
+and its separate components are replaced with components of other model;
+    \item hybridization “with interaction” – several models
+are used relatively independently, and thus they
+solve various particular tasks in achieving the final
+goal, exchanging data.
+\end{itemize}
+
+\par
+Let’s briefly consider these approaches of hybridization, firstly, by the example of various intelligent technologies and, secondly, within the limits of a separate technology. Let’s demonstrate realization of the
+hybridization approach “with functional replacement” on
+the example of fuzzy models’ and neural networks. We
+will consider fuzzy rule-based models as the dominant,
+and we will design each separate component of these
+models on the basis of neural networks. Possible ways of
+such hybridization allow to distinguish a separate class of
+fuzzy rule-based neural models (the first sign mentioned
+– fuzzy – is dominant) [3-5].
+
+In case the neural networks are used as dominating
+models, then realization of separate components of these
+models can be executed on the basis of fuzzy models’
+components. Possible ways of such hybridization allow
+distinguish a separate class of neural fuzzy models (the
+first mentioned sign – neural – is dominating) [6].
+
+Hybridization “with functional replacement” in the
+context of separate technology is most peculiar to neural
+networks technology (i.e. hybridization neural networks
+models only).
+
+Let’s demonstrate realization of the hybridization approach “with interaction” by the example of fuzzy models and neural networks technologies (to be more precise,
+fuzzy rule-based models and neural networks as above).
+According to this method the following models can be
+offered:
+\begin{itemize}
+    \item fuzzy rule-based models with use of neural networks for space partition of input variables and
+formation multidimensional membership functions
+of antecedents for them;
+    \item joint using of fuzzy rule-based models and neural
+networks for computing and “interchange” by parameter values [7].
+\end{itemize}
+
+The approach of hybridization of intelligent models
+“with interaction” is the most important at performance
+of complex problems. Complex problems are the problems that require the use of various models for performance of separate stages or particular tasks to achieve
+general purpose.
+
+
+Let’s consider the hybridization method “with interaction” within the limits of one technology by the example
+of fuzzy models at realization of complex problems [3].
+This method consists of the following stages.
+
+\textit{Stage} 1. Decomposition of a complex problem into set
+of particular tasks.
+
+
+\begin{center}
+$Problem = \{Task_1, Task_2, . . . , Task_n\}$.
+\end{center}
+
+
+Here \textit {Problem} – complex problem; Task\_i – particular task,
+\textit{i} = 1, . . . , \textit{n}.
+
+As an example, let’s consider the decomposition of a
+complex problem – \textit{situational analysis} – on following
+particular tasks:
+\begin{itemize}
+    \item $Task_{1}$ – identification of a situation;
+    \item $Task_{2}$ – estimation of alternative decisions;
+    \item $Task_{3}$ – prognosis of the resulting situation. 
+\end{itemize}
+
+\textit{Stage} 2. Specifying the requirements to fuzzy models
+for each of particular tasks.
+
+The \textit{following classification of requirements to intelligent models for particular tasks is offered:}
+\begin{itemize}\textit{
+\item {$R_{1}$} – subject of knowledge: \{R1,1 – about object of
+management; {$R_{1,2}$} – about a management method;
+{$R_{1,3}$} – about interrelation of events; {$R_{1,4}$} – about the
+decision-maker “relation” to object of management;
+{$R_{1,5}$} – about the decision-maker “relation” to a
+management method\};
+\item {$R_{2}$} – type of time analysis: \{{$R_{2,1}$} – statics; {$R_{2,2}$}
+– short-term dynamics; {$R_{2,3}$} – long-term/complete
+dynamics\};
+\item {$R_{3}$} – uncertainty type: \{$R_{3,1}$ – the stochastic; $R_{3,2}$ –
+not stochastic; $R_{3,3}$ – stochastic and not stochastic\};
+\item {$R_{4}$} – method of knowledge acquisition: \{$R_{4,1}$ –
+primary; $R_{4,2}$ – secondary\}.}
+\end{itemize}
+\par For each particular task $Task_{i}(i=1, . . . , n)$ one or
+several possible groups of these requirements can be
+determined.
+
+\begin{center}
+$Task_{i}, i = 1, . . . , n : \{G_{i,1}, G_{i,2}, . . . , G_{i,mi}\}$ 
+\end{center}
+Here $m_i$ – number of possible groups of requirements
+for a task $Task_i$
+
+The example of requirements to fuzzy models for
+particular tasks ($Task_{1}$, $Task_{2}$ and $Task_{3}$) is presented in
+Table 1.
+
+Stage 3. Classification of intelligent models and concretization of their possibilities to meet the requirements
+for particular tasks.
+
+The following classification of fuzzy models depending on their purpose is offered:
+\begin{itemize}
+    \item universal fuzzy models (rule-based, relational, functional);
+    \item task-oriented fuzzy models:
+\begin{itemize}
+    \item functional and relational estimation models;
+    \item models of events (linguistic lotteries, event
+trees, failure trees, Bayesian networks, game
+models);
+\item state models and management models (“stateaction” models, situational networks with the
+direct/inverse method of model design, cognitive maps, Markovian and semi-Markovian
+\end{itemize}
+\end{itemize}
+    \begin{table*}
+    \centering
+    
+
+\begin{tabular}{|c|c|cccc|}
+\hline
+\multirow{2}{*}{\textbf{\small Particular tasks}} & \multirow{2}{*}{\textbf{\begin{tabular}[c]{@{}c@{}}\small Group of\\ requirements\end{tabular}}} & \multicolumn{4}{c|}{\textbf{\small Requirements}} \\ \cline{3-6} 
+ &  & \multicolumn{1}{c|}{\textbf{\small $R_{1}$}} & \multicolumn{1}{c|}{\textbf{\small $R_{2}$}} & \multicolumn{1}{c|}{\textbf{\small $R_{3}$}} & \textbf{\small $R_{4}$} \\ \hline
+\multirow{2}{*}{\small $Task_1$} & \small $G_{1,1}$ & \multicolumn{1}{c|}{\small $R_{1,2}$} & \multicolumn{1}{c|}{\small $R_{2,1}$} & \multicolumn{1}{c|}{\small $R_{3,3}$} & \small $R_{4,1}$ \\ \cline{2-6} 
+ & \small $G_{1,2}$ & \multicolumn{1}{c|}{ \small $R_{1,2}$} & \multicolumn{1}{c|}{\small $R_{2,2}$} & \multicolumn{1}{c|}{\small $R_{3,3}$} & \small $R_{4,1}$ \\ \hline
+\multirow{3}{*}{\small $Task_2$} & \small $G_{2,1}$ & \multicolumn{1}{c|}{\small $R_{1,4}$} & \multicolumn{1}{c|}{\small $R_{2,1}$ OR \small $R_{2,2}$ OR \small $R_{2,3}$} & \multicolumn{1}{c|}{\small $R_{3,2}$} & \small $R_{4,1}$ \\ \cline{2-6} 
+ & \small $G_{2,2}$ & \multicolumn{1}{c|}{\small $R_{1,2}$} & \multicolumn{1}{c|}{\small $R_{2,2}$} & \multicolumn{1}{c|}{\small $R_{3,3}$} & \small $R_{4,1}$ \\ \cline{2-6} 
+ &\small  $G_{2,3}$ & \multicolumn{1}{c|}{\small $R_{1,2}$} & \multicolumn{1}{c|}{\small $R_{2,3}$} & \multicolumn{1}{c|}{\small $R_{3,3}$} & \small $R_{4,2}$ \\ \hline
+\multirow{2}{*}{\small $Task_3$} & \small $G_{3,1}$ & \multicolumn{1}{c|}{\small$R_{1,1}$} & \multicolumn{1}{c|}{\small$R_{2,2}$ OR \small$R_{2,3}$} & \multicolumn{1}{c|}{\small$R_{3,3}$} & \small$R_{4,1}$ \\ \cline{2-6} 
+ & \small$G_{3,2}$ & \multicolumn{1}{c|}{\small$R_{1,2}$} & \multicolumn{1}{c|}{\small$R_{2,2}$ OR \small$R_{2,3}$} & \multicolumn{1}{c|}{\small$R_{3,3}$} & \small$R_{4,1}$ \\ \hline
+\end{tabular}
+\caption{\label{tab:Table 1}\\REQUIREMENTS TO FUZZY MODELS FOR PARTICULAR TASKS}
+\end{table*}
+models, Petri nets, automatons, decision trees)
+[3].
+
+Stage 4. Specification of set of the intelligent models
+that meets requirements for particular tasks.
+
+“The covering tree” of complex problem is formed
+by a set of corresponding fuzzy models on the basis of
+Stages 2 and 3. The example of “the covering tree” for
+a considered problem is presented in Fig. 1.
+
+\textit{Stage 5.} Selection of a subset of the intelligent models
+providing minimal “covering” of a complex problem.
+
+Minimal “covering” of a complex problem is such a
+subset of fuzzy models where even removal of one of the
+models leads to impossibility of the problem solution.
+
+The following subset of fuzzy models for a considered
+example is selected:
+\begin{itemize}
+    \item fuzzy situational network with the direct method of
+model design (basic model);
+    \item fuzzy model “state-action” (supplementary model);
+    \item linguistic lotteries (supplementary model).
+\end{itemize}
+\section{EXAMPLE OF THE COMPOSITIONAL
+FUZZY MODEL FOR THE EFFICIENCY
+ESTIMATION OF ENERGY- AND RESOURCE
+SAVING}
+
+
+Figure 2 shows the structure of the compositional
+fuzzy model for the efficiency estimation of energy- and
+resource saving, based on the proposed method [8].
+
+The compositional fuzzy model consists of the sets of
+the following models:
+\begin{itemize}
+    \item fuzzy cognitive models for estimating the effects of
+actions on the subsystems’ indicators (power supply,
+heat and water supply);
+    \item fuzzy rule-based models for efficiency estimating of
+energy- and resource saving of subsystems: power
+supply, heat and water supply;
+    \item generalized fuzzy rule-based model for efficiency
+estimating of energy- and resource saving of system
+as a whole
+\end{itemize}
+
+The fuzzy cognitive models are affected by events
+from groups of measures $A_{s_{j}} =\{a_{k_{j}}^{\small( s_{j} \small)}\}
+, k_{j} = 1, . . . , K_{j} $,
+corresponding to subsystems $\forall s_{j} \in S$. As a result,
+the values of the output variables $p_{1}(s_{j})$ and $p_{2}(s_{j})$
+of these models, which (together with indicators $p_{3}(s_{j})$
+and $p_{4}(s_{j})$, do not depend on the impact of the events)
+are fed to the inputs of fuzzy rule-based models for
+efficiency estimating $e(s_{j} ), j = 1, . . . , J$ of energy- and
+resource saving of subsystems. Then, these estimates are
+aggregated into a generalized indicator $E(S)$ of energy
+and resource efficiency of the entire system $S$ using
+generalized fuzzy rule-based model.
+\section{CONCLUSION}
+
+The development trends of intelligent models are
+generalized. The approach to systematization and classification of hybrid models is offered. Examples of
+classification of known hybrid intelligent models related
+to each considered approach to their hybridization are
+given.
+
+The proposed method of hybridization of intelligent
+models is considered. This method consists of the following stages: 
+
+\begin{itemize}
+    \item[(i)] decomposition of a complex problem into set of
+particular tasks; 
+    \item[(ii)] specifying the requirements to models for each of
+particular tasks; 
+    \item[(iii)] classification of intelligent models and concretization of their possibilities to meet the requirements
+for particular tasks;
+    \item[(iv)] specification of set of the intelligent models that
+meets requirements for particular tasks;
+    \item[(v)] selection of a subset of the intelligent models providing minimal “covering” of a complex problem. 
+\end{itemize}
+\begin{center}
+    ACKNOWLEDGMENT
+\end{center}
+
+Research is supported by the grant of the Russian Foundation for Basic Research, project no. 18-07-
+00928\_a.
+\renewcommand\refname{\small REFERENCES}
+\begin{thebibliography}{}
+\bibitem{book1} S. Rajasekaran, G.A. V. Pai, “Neural Network, Fuzzy Logic, and
+Genetic Algorithms – Synthesis and Applications,” Prentice Hall,
+2005.
+\bibitem{book2} V. K. Lamba, “Neuro Fuzzy Systems,” Laxmi Publications PVT
+Limited, 2008.
+\bibitem{book3} V. V. Borisov, “Hybridization of Intellectual Technologies for Analytical Tasks of Decision-Making Support,” Journal of Computer
+Engineering and Informatics. 2014, Vol. 2, Iss. 1. PP. 148–156.
+\bibitem{book4} C. H. Chen, “Efficient Self-Adaptive Learning Algorithm for
+TSK-Type Compensatory Neural Fuzzy Networks,” International
+Journal of Fuzzy Systems, vol. 14, no. 4, pp. 510-518, 2012.
+\end{thebibliography}
+
+\end{document}
