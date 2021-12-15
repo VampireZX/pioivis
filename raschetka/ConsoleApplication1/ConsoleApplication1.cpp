@@ -1,91 +1,68 @@
 ﻿#include <iostream>
-#include <fstream>
-#include <vector>
-#include <string>
-#include <queue>
-#include <cmath>
 using namespace std;
-bool graph[1000][1000];
+const int N = 1000;
+int kolvovershin, diametr = 0, graph[N][N];
 
-int searchingfordiametr(int N);
+void matrizasmezhnosti(int kolvovershin);
+void algorithmfloydayorshela(int graph[N][N], int kolvovershin);
 
 int main()
 {
-	setlocale(LC_ALL, "Russian");
-	int N;
-	cout << "Введите кол-во вершин графа: ";
-	cin >> N;
+	setlocale(LC_ALL, "Rus");
 
-	cout << "Матрица смежности графа" << endl;
-	for (int i = 0; i < N; i++)
+	cout << "Количество вершин в графе: ";
+	cin >> kolvovershin;
+
+	cout << "Введите матрицу смежности:\n";
+	matrizasmezhnosti(kolvovershin);
+
+	cout << "Диаметр: " << endl;
+	algorithmfloydayorshela(graph, kolvovershin);
+
+}
+
+void algorithmfloydayorshela(int graph[N][N], int kolvovershin)
+{
+	int k;
+	for (int i = 0; i < kolvovershin; i++) graph[i][i] = 0;
+
+	for (k = 0; k < kolvovershin; k++) //Алгоритм флойда - уоршелла
 	{
-		for (int j = 0; j < N; j++)
+		for (int i = 0; i < kolvovershin; i++)
+		{
+			for (int j = 0; j < kolvovershin; j++)
+			{
+				if (graph[i][k] && graph[k][j] && i != j)
+				{
+					if (graph[i][k] + graph[k][j] < graph[i][j] || graph[i][j] == 0)
+					{
+						graph[i][j] = graph[i][k] + graph[k][j];
+					}
+				}
+			}
+		}
+	}
+
+	for (int i = 0; i < kolvovershin; i++) //сравнивание кратчайших путейй
+	{
+		for (int j = 0; j < kolvovershin; j++)
+		{
+			if (graph[i][j] > diametr)
+			{
+				diametr = graph[i][j];
+			}
+		}
+	}
+
+	cout << diametr << endl;
+}
+
+void matrizasmezhnosti(int kolvovershin) {
+	for (int i = 0; i < kolvovershin; i++)
+	{
+		for (int j = 0; j < kolvovershin; j++)
 		{
 			cin >> graph[i][j];
 		}
 	}
-
-    int diametr = searchingfordiametr(N);
-    cout << diametr;
-
-}
-
-int searchingfordiametr(int N)
-{
-    int** edge = new int* [N];
-
-    for (int i = 0; i < N; i++)
-    {
-        edge[i] = new int[N];
-    }
-
-    for (int i = 0; i < N; i++)
-    {
-        for (int j = 0; j < N; j++) {
-            edge[i][j] = graph[i][j]; 
-            if (!edge[i][j])
-            {
-                edge[i][j] = 10000;
-            }
-        }
-    }
-
-    for (int k = 0; k < N; k++)
-    {
-        for (int i = 0; i < N; i++)
-        {
-            for (int j = 0; j < N; j++)
-            {
-                if (i != j)
-                {
-                    edge[i][j] = min(edge[i][j], edge[i][k] + edge[k][j]);
-                }
-            }
-        }
-    }
-
-    for (int i = 0; i < N; i++)
-    {
-        for (int j = 0; j < N; j++)
-        {
-            if (edge[i][j] == 10000)
-            {
-                edge[i][j] = 0;
-            }
-        }
-    }
-
-    int max = edge[0][1];
-    for (int i = 0; i < N; i++)
-    {
-        for (int j = i + 1; j < N; j++) {
-            if (edge[i][j] > max)
-            {
-                max = edge[i][j];
-            }
-        }
-    }
-
-    return max;
-    delete[] edge;
 }
