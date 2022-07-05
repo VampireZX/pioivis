@@ -8,7 +8,7 @@ struct Node {
 	Node* parent;
 	Node* left;
 	Node* right;
-	int color; // 1 - Red, 0 - Black
+	int color;
 };
 typedef Node* NodePtr;
 
@@ -33,10 +33,9 @@ public:
 	int globalMaximum();
 	void leftRotate(NodePtr x);
 	int closestLesser(int k);
-	int closestGreater(int k);
 	void rightRotate(NodePtr x);
 	void insert(int key);
 	void deleteNode(int data);
 };
 
-#endif // !RBT_H_
+#endif

@@ -1,0 +1,249 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/hlebyshek/ontologies/2022/2/untitled-ontology-5#"
+     xml:base="http://www.semanticweb.org/hlebyshek/ontologies/2022/2/untitled-ontology-5"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:длина="http://www.semanticweb.org/hlebyshek/ontologies/2022/2/untitled-ontology-5#длина,"
+     xmlns:величина="http://www.semanticweb.org/hlebyshek/ontologies/2022/2/untitled-ontology-5#величина,">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/hlebyshek/ontologies/2022/2/untitled-ontology-5"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/hlebyshek/ontologies/2022/2/untitled-ontology-5#форма -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/hlebyshek/ontologies/2022/2/untitled-ontology-5#форма"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/hlebyshek/ontologies/2022/2/untitled-ontology-5#величина_Тл -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/hlebyshek/ontologies/2022/2/untitled-ontology-5#величина_Тл">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/hlebyshek/ontologies/2022/2/untitled-ontology-5#кол-во_витков -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/hlebyshek/ontologies/2022/2/untitled-ontology-5#кол-во_витков">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/hlebyshek/ontologies/2022/2/untitled-ontology-5#параметр_постоянности -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/hlebyshek/ontologies/2022/2/untitled-ontology-5#параметр_постоянности">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/hlebyshek/ontologies/2022/2/untitled-ontology-5#параметр_распределения_витков -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/hlebyshek/ontologies/2022/2/untitled-ontology-5#параметр_распределения_витков">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/hlebyshek/ontologies/2022/2/untitled-ontology-5#величина,_А -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/hlebyshek/ontologies/2022/2/untitled-ontology-5#величина,_А">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/hlebyshek/ontologies/2022/2/untitled-ontology-5#длина,_см -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/hlebyshek/ontologies/2022/2/untitled-ontology-5#длина,_см">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/hlebyshek/ontologies/2022/2/untitled-ontology-5#Числа -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hlebyshek/ontologies/2022/2/untitled-ontology-5#Числа"/>
+    
+
+
+    <!-- http://www.semanticweb.org/hlebyshek/ontologies/2022/2/untitled-ontology-5#величина -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hlebyshek/ontologies/2022/2/untitled-ontology-5#величина"/>
+    
+
+
+    <!-- http://www.semanticweb.org/hlebyshek/ontologies/2022/2/untitled-ontology-5#геометрическа_фигура -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hlebyshek/ontologies/2022/2/untitled-ontology-5#геометрическа_фигура"/>
+    
+
+
+    <!-- http://www.semanticweb.org/hlebyshek/ontologies/2022/2/untitled-ontology-5#известная_величина -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hlebyshek/ontologies/2022/2/untitled-ontology-5#известная_величина">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hlebyshek/ontologies/2022/2/untitled-ontology-5#величина"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hlebyshek/ontologies/2022/2/untitled-ontology-5#коэрцитивная_сила -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hlebyshek/ontologies/2022/2/untitled-ontology-5#коэрцитивная_сила"/>
+    
+
+
+    <!-- http://www.semanticweb.org/hlebyshek/ontologies/2022/2/untitled-ontology-5#магниты -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hlebyshek/ontologies/2022/2/untitled-ontology-5#магниты"/>
+    
+
+
+    <!-- http://www.semanticweb.org/hlebyshek/ontologies/2022/2/untitled-ontology-5#неизвестная_величина -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hlebyshek/ontologies/2022/2/untitled-ontology-5#неизвестная_величина">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hlebyshek/ontologies/2022/2/untitled-ontology-5#величина"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/hlebyshek/ontologies/2022/2/untitled-ontology-5#B -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hlebyshek/ontologies/2022/2/untitled-ontology-5#B">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hlebyshek/ontologies/2022/2/untitled-ontology-5#известная_величина"/>
+        <величина_Тл rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</величина_Тл>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hlebyshek/ontologies/2022/2/untitled-ontology-5#H0 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hlebyshek/ontologies/2022/2/untitled-ontology-5#H0">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hlebyshek/ontologies/2022/2/untitled-ontology-5#коэрцитивная_сила"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/hlebyshek/ontologies/2022/2/untitled-ontology-5#неизвестная_величина"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hlebyshek/ontologies/2022/2/untitled-ontology-5#I -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hlebyshek/ontologies/2022/2/untitled-ontology-5#I">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hlebyshek/ontologies/2022/2/untitled-ontology-5#известная_величина"/>
+        <величина:_А rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</величина:_А>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hlebyshek/ontologies/2022/2/untitled-ontology-5#len -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hlebyshek/ontologies/2022/2/untitled-ontology-5#len">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hlebyshek/ontologies/2022/2/untitled-ontology-5#известная_величина"/>
+        <длина:_см rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</длина:_см>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hlebyshek/ontologies/2022/2/untitled-ontology-5#Магнит -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hlebyshek/ontologies/2022/2/untitled-ontology-5#Магнит">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hlebyshek/ontologies/2022/2/untitled-ontology-5#магниты"/>
+        <форма rdf:resource="http://www.semanticweb.org/hlebyshek/ontologies/2022/2/untitled-ontology-5#цилиндр"/>
+        <кол-во_витков rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">300</кол-во_витков>
+        <параметр_постоянности>постоянный</параметр_постоянности>
+        <параметр_распределения_витков>равномерное</параметр_распределения_витков>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hlebyshek/ontologies/2022/2/untitled-ontology-5#цилиндр -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hlebyshek/ontologies/2022/2/untitled-ontology-5#цилиндр">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hlebyshek/ontologies/2022/2/untitled-ontology-5#геометрическа_фигура"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hlebyshek/ontologies/2022/2/untitled-ontology-5#0 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hlebyshek/ontologies/2022/2/untitled-ontology-5#0">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hlebyshek/ontologies/2022/2/untitled-ontology-5#Числа"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hlebyshek/ontologies/2022/2/untitled-ontology-5#15 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hlebyshek/ontologies/2022/2/untitled-ontology-5#15">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hlebyshek/ontologies/2022/2/untitled-ontology-5#Числа"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hlebyshek/ontologies/2022/2/untitled-ontology-5#3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hlebyshek/ontologies/2022/2/untitled-ontology-5#3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hlebyshek/ontologies/2022/2/untitled-ontology-5#Числа"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hlebyshek/ontologies/2022/2/untitled-ontology-5#300 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hlebyshek/ontologies/2022/2/untitled-ontology-5#300">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hlebyshek/ontologies/2022/2/untitled-ontology-5#Числа"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

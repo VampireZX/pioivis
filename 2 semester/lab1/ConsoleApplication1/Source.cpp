@@ -111,7 +111,7 @@ NodePtr RBTree::maximum(NodePtr node) {
 }
 
 void RBTree::deleteNodeHelper(NodePtr node, int key) {
-	// find the node containing key
+	// ищем вершину содержащую ключ
 	NodePtr z = TNULL;
 	NodePtr x, y;
 	while (node != TNULL) {
@@ -165,7 +165,7 @@ void RBTree::fixInsert(NodePtr k) {
 	NodePtr u;
 	while (k->parent->color == 1) {
 		if (k->parent == k->parent->parent->right) {
-			u = k->parent->parent->left; // uncle
+			u = k->parent->parent->left; // дядя
 			if (u->color == 1) {
 				// case 3.1
 				u->color = 0;
@@ -186,7 +186,7 @@ void RBTree::fixInsert(NodePtr k) {
 			}
 		}
 		else {
-			u = k->parent->parent->right; // uncle
+			u = k->parent->parent->right; // дядя
 
 			if (u->color == 1) {
 				// mirror case 3.1
@@ -283,18 +283,6 @@ int RBTree::closestLesser(int k) {
 	}
 }
 
-int RBTree::closestGreater(int k) {
-	if (k > globalMaximum() || root == TNULL)
-		return NULL;
-	else {
-		while (true) {
-			k++;
-			if (searchTree(k) != TNULL)
-				return searchTree(k)->data;
-		}
-	}
-}
-
 void RBTree::rightRotate(NodePtr x) {
 	NodePtr y = x->left;
 	x->left = y->right;
@@ -324,10 +312,10 @@ void RBTree::insert(int key) {
 		node->data = key;
 		node->left = TNULL;
 		node->right = TNULL;
-		node->color = 1; // new node must be red
+		node->color = 1; // красная нода
 
 		NodePtr y = nullptr;
-		NodePtr x = this->root;
+		NodePtr x = this->root; //для наглядности
 
 		while (x != TNULL) {
 			y = x;
@@ -339,7 +327,7 @@ void RBTree::insert(int key) {
 			}
 		}
 
-		// y is parent of x
+		// y родитель x
 		node->parent = y;
 		if (y == nullptr) {
 			root = node;
@@ -351,18 +339,17 @@ void RBTree::insert(int key) {
 			y->right = node;
 		}
 
-		// if new node is a root node, simply return
+		// если родитель корень, возвращаем
 		if (node->parent == nullptr) {
 			node->color = 0;
 			return;
 		}
 
-		// if the grandparent is null, simply return
+		// если прородитель нулевой, возвращаем
 		if (node->parent->parent == nullptr) {
 			return;
 		}
 
-		// Fix the tree
 		fixInsert(node);
 	}
 }

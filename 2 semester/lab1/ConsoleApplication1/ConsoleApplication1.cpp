@@ -45,7 +45,6 @@ int CheckingExisting(RBTree x, ifstream& file) {
 	return kol;
 }
 
-//general insert test
 bool InsertTesting1() {
 
 	RBTree example;
@@ -79,7 +78,6 @@ bool InsertTesting1() {
 	IT1.close();
 }
 
-//repeating node insert
 bool InsertTesting2() {
 	RBTree example;
 	ifstream IT2("InsertTest2.txt");
@@ -100,12 +98,12 @@ bool InsertTesting2() {
 	IT2.close();
 }
 
-//genereal deleting
+
 bool DeleteTesting1() {
 
 	RBTree example;
-
-	ifstream DT1("DeleteTest1.txt");
+ifstream DT1("DeleteTest1.txt");
+	
 	if (DT1) {
 		int n, m, fdata, fcolor, fkol, key;
 		int kol = 0;
@@ -231,16 +229,6 @@ bool MaxFinderTesting1() {
 	MaT1.close();
 }
 
-//in an empty tree
-bool MaxFinderTesting2() {
-	RBTree example;
-
-	if (example.globalMaximum() == NULL)
-		return 1;
-	else
-		return 0;
-}
-
 //general test
 bool MinFinderTesting1() {
 	RBTree example;
@@ -262,16 +250,6 @@ bool MinFinderTesting1() {
 	else
 		return 0;
 	MiT1.close();
-}
-
-//in an empty tree
-bool MinFinderTesting2() {
-	RBTree example;
-
-	if (example.globalMinimum() == NULL)
-		return 1;
-	else
-		return 0;
 }
 
 //general test
@@ -339,74 +317,8 @@ bool ClosestLesserTesting3() {
 	LT3.close();
 }
 
-//general test
-bool ClosestGreaterTesting1() {
-	RBTree example;
-
-	ifstream GT1("GreaterTest1.txt");
-	if (GT1) {
-		int n, m, key, result;
-		GT1 >> n;
-		for (int i = 0; i < n; i++) {
-			GT1 >> key;
-			example.insert(key);
-		}
-		GT1 >> m;
-		GT1 >> result;
-		if (example.closestGreater(m) == result)
-			return 1;
-		else
-			return 0;
-	}
-	else
-		return 0;
-	GT1.close();
-}
-
-//in an empty tree
-bool ClosestGreaterTesting2() {
-	RBTree example;
-
-	ifstream GT2("GreaterTest2.txt");
-	if (GT2) {
-		int n;
-		GT2 >> n;
-		if (example.closestGreater(n) == NULL)
-			return 1;
-		else
-			return 0;
-	}
-	else
-		return 0;
-	GT2.close();
-}
-
-//the key is bigger than maximum 
-bool ClosestGreaterTesting3() {
-	RBTree example;
-
-	ifstream GT3("GreaterTest3.txt");
-	if (GT3) {
-		int n, key, m;
-		GT3 >> n;
-		for (int i = 0; i < n; i++) {
-			GT3 >> key;
-			example.insert(key);
-		}
-		GT3 >> m;
-		if (example.closestGreater(m) == NULL)
-			return 1;
-		else
-			return 0;
-	}
-	else
-		return 0;
-	GT3.close();
-}
-
 int main()
 {
-	cout << "Performing testing..." << endl;
 	cout << '\n' << '\t' << "Testing insert function..." << '\n' << '\t' << "Test 1 (inserting normal numbers): ";
 	test(InsertTesting1());
 	cout << '\t' << "Test 2 (inserting already existing node): ";
@@ -419,26 +331,10 @@ int main()
 	test(SearchTesting1());
 	cout << '\t' << "Test 2 (searching for a node that doesn't exist): ";
 	test(SearchTesting2());
-	cout << '\n' << '\t' << "Testing search for the maximum function..." << '\n' << '\t' << "Test 1 (searching for the maximum): ";
+	cout << '\n' << '\t' << "Testing search for the maximum function..." << '\n' << '\t' << "Test (searching for the maximum): ";
 	test(MaxFinderTesting1());
-	cout << '\t' << "Test 2 (searching for the maximum in an empty tree): ";
-	test(MaxFinderTesting2());
-	cout << '\n' << '\t' << "Testing search for the minimum function..." << '\n' << '\t' << "Test 1 (searching for the minimum): ";
+	cout << '\n' << '\t' << "Testing search for the minimum function..." << '\n' << '\t' << "Test (searching for the minimum): ";
 	test(MinFinderTesting1());
-	cout << '\t' << "Test 2 (searching for the minimum in an empty tree): ";
-	test(MinFinderTesting2());
-	cout << '\n' << '\t' << "Testing search the closest lesser function..." << '\n' << '\t' << "Test 1 (searching for the closest lesser): ";
-	test(ClosestLesserTesting1());
-	cout << '\t' << "Test 2 (searching for the closest lesser in an empty tree): ";
-	test(ClosestLesserTesting2());
-	cout << '\t' << "Test 3 (the input number is lesser than minimum): ";
-	test(ClosestLesserTesting3());
-	cout << '\n' << '\t' << "Testing search the closest greater function..." << '\n' << '\t' << "Test 1 (searching for the closest greater): ";
-	test(ClosestGreaterTesting1());
-	cout << '\t' << "Test 2 (searching for the closest greater in an empty tree): ";
-	test(ClosestGreaterTesting2());
-	cout << '\t' << "Test 3 (the input number is bigger than maximum): ";
-	test(ClosestGreaterTesting3());
-	cout << '\n' << "The tests finished." << endl;
+
 	exit(0);
 }

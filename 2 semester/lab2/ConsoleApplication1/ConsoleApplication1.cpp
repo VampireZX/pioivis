@@ -4,6 +4,7 @@
 #include <fstream>
 #include <windows.h>
 #include <algorithm>
+
 using namespace std;
 
 struct edge
@@ -36,7 +37,7 @@ int main()
 	length[0] = 0;
 	int x;
 	
-	for (int i = 0; i < n*0.1; i++)
+	for (int i = 0; i < n; i++)
 	{
 		x = -1;
 		for (int j = 0; j < m; j++)
