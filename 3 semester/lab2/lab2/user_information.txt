@@ -1,0 +1,6 @@
+Current account: 150 usd
+=====HISTORY=====
+1: replenishment from another account 100 usd
+The name of user:
+Kirill Artukhov
+PIN is 1234

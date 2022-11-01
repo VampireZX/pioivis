@@ -1,0 +1,10 @@
+﻿  postmachine.cpp
+D:\pioivis\3 semester\lab1(rerpair)\lab1(rerpair)\postmachine.cpp(21,22): warning C4244: аргумент: преобразование "unsigned __int64" в "const unsigned int", возможна потеря данных
+D:\pioivis\3 semester\lab1(rerpair)\lab1(rerpair)\postmachine.cpp(21,40): warning C4244: аргумент: преобразование "unsigned __int64" в "const unsigned int", возможна потеря данных
+D:\pioivis\3 semester\lab1(rerpair)\lab1(rerpair)\postmachine.cpp(65,32): warning C4244: аргумент: преобразование "double" в "const unsigned int", возможна потеря данных
+D:\pioivis\3 semester\lab1(rerpair)\lab1(rerpair)\postmachine.cpp(97,22): warning C4244: аргумент: преобразование "unsigned __int64" в "const unsigned int", возможна потеря данных
+D:\pioivis\3 semester\lab1(rerpair)\lab1(rerpair)\postmachine.cpp(113,22): warning C4244: аргумент: преобразование "unsigned __int64" в "const unsigned int", возможна потеря данных
+D:\pioivis\3 semester\lab1(rerpair)\lab1(rerpair)\postmachine.cpp(114,22): warning C4244: аргумент: преобразование "unsigned __int64" в "const unsigned int", возможна потеря данных
+D:\pioivis\3 semester\lab1(rerpair)\lab1(rerpair)\postmachine.cpp(124,22): warning C4244: аргумент: преобразование "unsigned __int64" в "const unsigned int", возможна потеря данных
+D:\pioivis\3 semester\lab1(rerpair)\lab1(rerpair)\postmachine.cpp(125,22): warning C4244: аргумент: преобразование "unsigned __int64" в "const unsigned int", возможна потеря данных
+  lab1(rerpair).vcxproj -> D:\pioivis\3 semester\lab1(rerpair)\Debug\lab1(rerpair).exe
